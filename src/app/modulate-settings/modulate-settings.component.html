@@ -1,0 +1,46 @@
+<div class="settings-parent">
+  <h3>Settings</h3>
+  <form [formGroup]="settingsForm"  (ngSubmit)="onSubmit(settingsForm.value)" >
+    <div>
+      <label for="curveType">
+        Curve Type
+      </label>
+      <select id="curveType" type="" formControlName="curveType">
+        <option value="sinus">Sinus</option>
+        <option value="cosinus">Cosinus</option>
+        <option value="square">Sqaure</option>
+        <option value="triangle">Triangle</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="amplitude">
+        Amp
+      </label>
+      <input id="amp" type="number" formControlName="amplitude" />
+    </div>
+
+    <div>
+      <label for="frequency">
+        Freq
+      </label>
+      <input id="freq" type="number" formControlName="frequency" />
+    </div>
+
+    <div>
+      <label for="shift">
+        Shft
+      </label>
+      <input id="shft" type="number" formControlName="shift" />
+    </div>
+
+    <div>
+      <label for="active">
+        Active
+      </label>
+      <input id="active" type="checkbox" formControlName="active" />
+    </div>
+
+    <button class="standard-btn" type="submit">Save changes</button>
+  </form>
+</div>
