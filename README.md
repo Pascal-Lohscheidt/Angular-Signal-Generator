@@ -1,6 +1,10 @@
 # MyFirstApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
+It is my first angular app. I just tried to get familiar with the key concepts of that framework. 
+Usage:
+The app creates two curves and lets you change those within the "curve settings". Those two curves are summed up and create a third result curve.
+Just hit the select button and change the curve properties. Isolate the result curve by double clicking the legend.
 
 ## Development server
 
