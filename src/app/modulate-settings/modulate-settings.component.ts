@@ -3,6 +3,10 @@ import { FormBuilder } from '@angular/forms';
 import { ChartService } from '../chart.service';
 import { Subscription } from 'rxjs';
 
+//Summary:
+//The component handles the change settings form of the curve.
+//It listens to the chart service (observable) to get notified when the
+//selected curve ref was replaced with another curve and updates the form data.
 
 @Component({
   selector: 'app-modulate-settings',

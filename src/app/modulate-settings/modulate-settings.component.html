@@ -1,9 +1,9 @@
 <div class="settings-parent">
-  <h3>Curve settings</h3>
+  <h3>Curve Settings:</h3>
   <form [formGroup]="settingsForm"  (ngSubmit)="onSubmit(settingsForm.value)" >
     <div>
       <label for="curveType">
-        Curve Type
+        Curve Type:
       </label>
       <select id="curveType" type="" formControlName="curveType">
         <option value="sinus">Sinus</option>
@@ -36,7 +36,7 @@
 
     <div>
       <label for="active">
-        Active & visible
+        Active & visible:
       </label>
       <input id="active" type="checkbox" formControlName="active" />
     </div>

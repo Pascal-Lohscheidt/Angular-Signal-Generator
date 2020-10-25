@@ -1,6 +1,7 @@
 <div class="curve-selection-parent">
   <div class="curve-info" *ngFor="let curve of curves">
     <h3>Curve:  {{ curve.id + 1 }} </h3>
+    <h4>Curve type: {{ curve.curveSettings.curveType}} </h4>
     <h4>Amplitude: {{ curve.curveSettings.amplitude}} </h4>
     <h4>Frequency: {{ curve.curveSettings.frequency}} </h4>
     <h4>Phase shift: {{ curve.curveSettings.shift}} </h4>

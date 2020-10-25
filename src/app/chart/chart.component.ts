@@ -2,6 +2,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ChartService } from '../chart.service';
 import { Subscription } from 'rxjs';
 
+//Summary:
+//That component just listens to the observable for changes.
+//Any time that happens it updates the chart
+
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -31,6 +35,8 @@ export class ChartComponent implements OnInit, OnDestroy {
     this.chartDataSubscription.unsubscribe();
   }
 
+  //This function fills in the nessary data of the graph and asks the chartService
+  //for the right data set of all curves.
   updateChartData(){
     this.curves = this.chartService.getAllCurves();
     //updating the graph Note this is not really  perfromant as we are generating all graphs
