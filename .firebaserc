@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "signalgenerator-f4302": {
+      "hosting": {
+        "my-first-app": [
+          "signalgenerator-f4302"
+        ]
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <div class="settings-parent">
-  <h3>Settings</h3>
+  <h3>Curve settings</h3>
   <form [formGroup]="settingsForm"  (ngSubmit)="onSubmit(settingsForm.value)" >
     <div>
       <label for="curveType">
@@ -15,28 +15,28 @@
 
     <div>
       <label for="amplitude">
-        Amp
+        Amplitude:
       </label>
       <input id="amp" type="number" formControlName="amplitude" />
     </div>
 
     <div>
       <label for="frequency">
-        Freq
+        Frequency:
       </label>
       <input id="freq" type="number" formControlName="frequency" />
     </div>
 
     <div>
       <label for="shift">
-        Shft
+        Phase shift:
       </label>
       <input id="shft" type="number" formControlName="shift" />
     </div>
 
     <div>
       <label for="active">
-        Active
+        Active & visible
       </label>
       <input id="active" type="checkbox" formControlName="active" />
     </div>

@@ -68,7 +68,7 @@ export class ChartService {
   generateGraphs() {
     let data = [];
     this.curves.forEach(curve => {
-      if(curve.curveSettings.active) data.push(this.generateGraphData(curve.curveSettings)); //ONLY if the curve is active show it in the graph
+      if(curve.curveSettings.active) data.push(this.generateGraphData(curve.curveSettings, curve.id)); //ONLY if the curve is active show it in the graph
     });
 
 
@@ -92,7 +92,8 @@ export class ChartService {
         y: summedUpY,
         type: 'scatter',
         mode: 'lines+points',
-        marker: {color: 'cyan'}
+        marker: {color: 'cyan'},
+        name: 'result curve'
       }
       data.push(newCurveData);
     }
@@ -100,7 +101,7 @@ export class ChartService {
     return data;
   }
 
-  private generateGraphData(settings) {
+  private generateGraphData(settings, curveId) {
     let stepSize = 0.03;
 
 
@@ -117,7 +118,8 @@ export class ChartService {
       y: yCoordinates,
       type: 'scatter',
       mode: 'lines+points',
-      marker: {color: GRAPH_COLORS[settings.curveId]}
+      marker: {color: GRAPH_COLORS[settings.id]},
+      name: (curveId + 1).toString() + '# curve'
     }
     return data;
   }
